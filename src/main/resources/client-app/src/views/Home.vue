@@ -17,8 +17,9 @@ export default {
   },
   setup() {
     onMounted(async () => {
+      console.log("ПРОСТО ФЕТЧУ");
       const res = await fetch("/test");
-      const result = res.json();
+      const result = await res.json();
       console.log(result);
     });
   },
