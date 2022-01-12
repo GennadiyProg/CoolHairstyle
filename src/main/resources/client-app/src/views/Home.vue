@@ -17,7 +17,7 @@ export default {
   },
   setup() {
     onMounted(async () => {
-      console.log("ПРОСТО ФЕТЧУ");
+      console.log("ПРОСТО ФЕТЧУ второй раз");
       const res = await fetch("/test");
       const result = await res.json();
       console.log(result);
