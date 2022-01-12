@@ -89,4 +89,11 @@ public class UserController {
         SecurityContextLogoutHandler securityContextLogoutHandler = new SecurityContextLogoutHandler();
         securityContextLogoutHandler.logout(request, response, null);
     }
+
+    @GetMapping("test")
+    public ResponseEntity<?> test(){
+        Map<Object, Object> test = new HashMap<>();
+        test.put("test", "Good request");
+        return ResponseEntity.ok(test);
+    }
 }
